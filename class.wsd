@@ -1,0 +1,274 @@
+@startuml
+set namespaceSeparator ::
+
+abstract class "stego_app::DataStore::dataStore.dart::ApiDataStore" {
+  +Future<Uint8List?> embedString()
+  +Future<String?> extractString()
+}
+
+abstract class "stego_app::DataStore::dataStore.dart::MultipartRequestFactory" {
+  +Future<StreamedResponse> createEmbedRequest()
+  +Future<StreamedResponse> createExtractRequest()
+}
+
+class "stego_app::DataStore::dataStore.dart::ImpApiDataStore" {
+  -String _baseUrl
+  -MultipartRequestFactory _requestFactory
+  +Future<Uint8List?> embedString()
+  +Future<String?> extractString()
+}
+
+"stego_app::DataStore::dataStore.dart::ImpApiDataStore" o-- "stego_app::DataStore::dataStore.dart::MultipartRequestFactory"
+"stego_app::DataStore::dataStore.dart::ApiDataStore" <|-- "stego_app::DataStore::dataStore.dart::ImpApiDataStore"
+
+class "stego_app::DataStore::dataStore.dart::ImpMultipartRequestFactory" {
+  +Future<StreamedResponse> createEmbedRequest()
+  +Future<StreamedResponse> createExtractRequest()
+}
+
+"stego_app::DataStore::dataStore.dart::MultipartRequestFactory" <|-- "stego_app::DataStore::dataStore.dart::ImpMultipartRequestFactory"
+
+class "stego_app::main.dart::MockMultipartRequestFactory" {
+  +Future<StreamedResponse> createEmbedRequest()
+  +Future<StreamedResponse> createExtractRequest()
+}
+
+"stego_app::DataStore::dataStore.dart::MultipartRequestFactory" <|-- "stego_app::main.dart::MockMultipartRequestFactory"
+
+class "stego_app::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "stego_app::main.dart::MyApp"
+
+class "stego_app::Model::ImageModel.dart::SelectImageModel" {
+}
+
+"stego_app::Model::ImageModel.dart::_$SelectImageModel" <|-- "stego_app::Model::ImageModel.dart::SelectImageModel"
+
+class "stego_app::Model::ImageModel.dart::EmbImageModel" {
+}
+
+"stego_app::Model::ImageModel.dart::_$EmbImageModel" <|-- "stego_app::Model::ImageModel.dart::EmbImageModel"
+
+class "stego_app::Model::ImageModel.dart::ExtStringModel" {
+}
+
+"stego_app::Model::ImageModel.dart::_$ExtStringModel" <|-- "stego_app::Model::ImageModel.dart::ExtStringModel"
+
+abstract class "stego_app::Model::ImageModel.dart::$SelectImageModelCopyWith" {
+  +$Res call()
+}
+
+class "stego_app::Model::ImageModel.dart::_$SelectImageModelCopyWithImpl" {
+  -$Val _value
+  -$Res Function($Val) _then
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::_$SelectImageModelCopyWithImpl" o-- "null::$Res Function($Val)"
+"stego_app::Model::ImageModel.dart::$SelectImageModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::_$SelectImageModelCopyWithImpl"
+
+abstract class "stego_app::Model::ImageModel.dart::_$$_SelectImageModelCopyWith" {
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::$SelectImageModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::_$$_SelectImageModelCopyWith"
+
+class "stego_app::Model::ImageModel.dart::__$$_SelectImageModelCopyWithImpl" {
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::_$SelectImageModelCopyWithImpl" <|-- "stego_app::Model::ImageModel.dart::__$$_SelectImageModelCopyWithImpl"
+"stego_app::Model::ImageModel.dart::_$$_SelectImageModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::__$$_SelectImageModelCopyWithImpl"
+
+class "stego_app::Model::ImageModel.dart::_$_SelectImageModel" {
+  +Uint8List? selectImageBytes
+  +int hashCode
+  +_$$_SelectImageModelCopyWith<_$_SelectImageModel> copyWith
+  +String toString()
+  +bool ==()
+}
+
+"stego_app::Model::ImageModel.dart::_$_SelectImageModel" o-- "dart::typed_data::Uint8List"
+"stego_app::Model::ImageModel.dart::_$_SelectImageModel" o-- "stego_app::Model::ImageModel.dart::_$$_SelectImageModelCopyWith<_$_SelectImageModel>"
+"stego_app::Model::ImageModel.dart::_SelectImageModel" <|-- "stego_app::Model::ImageModel.dart::_$_SelectImageModel"
+
+abstract class "stego_app::Model::ImageModel.dart::_SelectImageModel" {
+  +Uint8List? selectImageBytes
+  +_$$_SelectImageModelCopyWith<_$_SelectImageModel> copyWith
+}
+
+"stego_app::Model::ImageModel.dart::_SelectImageModel" o-- "dart::typed_data::Uint8List"
+"stego_app::Model::ImageModel.dart::_SelectImageModel" o-- "stego_app::Model::ImageModel.dart::_$$_SelectImageModelCopyWith<_$_SelectImageModel>"
+"stego_app::Model::ImageModel.dart::SelectImageModel" <|-- "stego_app::Model::ImageModel.dart::_SelectImageModel"
+
+abstract class "stego_app::Model::ImageModel.dart::$EmbImageModelCopyWith" {
+  +$Res call()
+}
+
+class "stego_app::Model::ImageModel.dart::_$EmbImageModelCopyWithImpl" {
+  -$Val _value
+  -$Res Function($Val) _then
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::_$EmbImageModelCopyWithImpl" o-- "null::$Res Function($Val)"
+"stego_app::Model::ImageModel.dart::$EmbImageModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::_$EmbImageModelCopyWithImpl"
+
+abstract class "stego_app::Model::ImageModel.dart::_$$_EmbImageModelCopyWith" {
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::$EmbImageModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::_$$_EmbImageModelCopyWith"
+
+class "stego_app::Model::ImageModel.dart::__$$_EmbImageModelCopyWithImpl" {
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::_$EmbImageModelCopyWithImpl" <|-- "stego_app::Model::ImageModel.dart::__$$_EmbImageModelCopyWithImpl"
+"stego_app::Model::ImageModel.dart::_$$_EmbImageModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::__$$_EmbImageModelCopyWithImpl"
+
+class "stego_app::Model::ImageModel.dart::_$_EmbImageModel" {
+  +Uint8List? embImageBytes
+  +int hashCode
+  +_$$_EmbImageModelCopyWith<_$_EmbImageModel> copyWith
+  +String toString()
+  +bool ==()
+}
+
+"stego_app::Model::ImageModel.dart::_$_EmbImageModel" o-- "dart::typed_data::Uint8List"
+"stego_app::Model::ImageModel.dart::_$_EmbImageModel" o-- "stego_app::Model::ImageModel.dart::_$$_EmbImageModelCopyWith<_$_EmbImageModel>"
+"stego_app::Model::ImageModel.dart::_EmbImageModel" <|-- "stego_app::Model::ImageModel.dart::_$_EmbImageModel"
+
+abstract class "stego_app::Model::ImageModel.dart::_EmbImageModel" {
+  +Uint8List? embImageBytes
+  +_$$_EmbImageModelCopyWith<_$_EmbImageModel> copyWith
+}
+
+"stego_app::Model::ImageModel.dart::_EmbImageModel" o-- "dart::typed_data::Uint8List"
+"stego_app::Model::ImageModel.dart::_EmbImageModel" o-- "stego_app::Model::ImageModel.dart::_$$_EmbImageModelCopyWith<_$_EmbImageModel>"
+"stego_app::Model::ImageModel.dart::EmbImageModel" <|-- "stego_app::Model::ImageModel.dart::_EmbImageModel"
+
+abstract class "stego_app::Model::ImageModel.dart::$ExtStringModelCopyWith" {
+  +$Res call()
+}
+
+class "stego_app::Model::ImageModel.dart::_$ExtStringModelCopyWithImpl" {
+  -$Val _value
+  -$Res Function($Val) _then
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::_$ExtStringModelCopyWithImpl" o-- "null::$Res Function($Val)"
+"stego_app::Model::ImageModel.dart::$ExtStringModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::_$ExtStringModelCopyWithImpl"
+
+abstract class "stego_app::Model::ImageModel.dart::_$$_ExtStringModelCopyWith" {
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::$ExtStringModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::_$$_ExtStringModelCopyWith"
+
+class "stego_app::Model::ImageModel.dart::__$$_ExtStringModelCopyWithImpl" {
+  +$Res call()
+}
+
+"stego_app::Model::ImageModel.dart::_$ExtStringModelCopyWithImpl" <|-- "stego_app::Model::ImageModel.dart::__$$_ExtStringModelCopyWithImpl"
+"stego_app::Model::ImageModel.dart::_$$_ExtStringModelCopyWith" <|-- "stego_app::Model::ImageModel.dart::__$$_ExtStringModelCopyWithImpl"
+
+class "stego_app::Model::ImageModel.dart::_$_ExtStringModel" {
+  +String? extString
+  +int hashCode
+  +_$$_ExtStringModelCopyWith<_$_ExtStringModel> copyWith
+  +String toString()
+  +bool ==()
+}
+
+"stego_app::Model::ImageModel.dart::_$_ExtStringModel" o-- "stego_app::Model::ImageModel.dart::_$$_ExtStringModelCopyWith<_$_ExtStringModel>"
+"stego_app::Model::ImageModel.dart::_ExtStringModel" <|-- "stego_app::Model::ImageModel.dart::_$_ExtStringModel"
+
+abstract class "stego_app::Model::ImageModel.dart::_ExtStringModel" {
+  +String? extString
+  +_$$_ExtStringModelCopyWith<_$_ExtStringModel> copyWith
+}
+
+"stego_app::Model::ImageModel.dart::_ExtStringModel" o-- "stego_app::Model::ImageModel.dart::_$$_ExtStringModelCopyWith<_$_ExtStringModel>"
+"stego_app::Model::ImageModel.dart::ExtStringModel" <|-- "stego_app::Model::ImageModel.dart::_ExtStringModel"
+
+abstract class "stego_app::Model::ImageModel.dart::_$SelectImageModel" {
+  +Uint8List? selectImageBytes
+  +$SelectImageModelCopyWith<SelectImageModel> copyWith
+}
+
+"stego_app::Model::ImageModel.dart::_$SelectImageModel" o-- "dart::typed_data::Uint8List"
+"stego_app::Model::ImageModel.dart::_$SelectImageModel" o-- "stego_app::Model::ImageModel.dart::$SelectImageModelCopyWith<SelectImageModel>"
+
+abstract class "stego_app::Model::ImageModel.dart::_$EmbImageModel" {
+  +Uint8List? embImageBytes
+  +$EmbImageModelCopyWith<EmbImageModel> copyWith
+}
+
+"stego_app::Model::ImageModel.dart::_$EmbImageModel" o-- "dart::typed_data::Uint8List"
+"stego_app::Model::ImageModel.dart::_$EmbImageModel" o-- "stego_app::Model::ImageModel.dart::$EmbImageModelCopyWith<EmbImageModel>"
+
+abstract class "stego_app::Model::ImageModel.dart::_$ExtStringModel" {
+  +String? extString
+  +$ExtStringModelCopyWith<ExtStringModel> copyWith
+}
+
+"stego_app::Model::ImageModel.dart::_$ExtStringModel" o-- "stego_app::Model::ImageModel.dart::$ExtStringModelCopyWith<ExtStringModel>"
+
+class "stego_app::Repository::imageRepository.dart::ImageRepository" {
+  +ApiDataStore apiService
+  +Future<Uint8List?> embedString()
+  +Future<String?> extractString()
+}
+
+"stego_app::Repository::imageRepository.dart::ImageRepository" o-- "stego_app::DataStore::dataStore.dart::ApiDataStore"
+
+class "stego_app::View::homePage.dart::HomePage" {
+  -TextEditingController _textController
+  +Widget build()
+}
+
+"stego_app::View::homePage.dart::HomePage" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter_riverpod::src::consumer.dart::ConsumerWidget" <|-- "stego_app::View::homePage.dart::HomePage"
+
+class "stego_app::View::introductionPage.dart::IntroductionPage" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "stego_app::View::introductionPage.dart::IntroductionPage"
+
+class "stego_app::ViewModel::homePageViewModel.dart::SelectImageNotifire" {
+  +SelectImageModel build()
+  +dynamic selectImage()
+  +dynamic clearImage()
+}
+
+"riverpod::src::notifier.dart::AutoDisposeNotifier" <|-- "stego_app::ViewModel::homePageViewModel.dart::SelectImageNotifire"
+
+class "stego_app::ViewModel::homePageViewModel.dart::EmbImageNotifire" {
+  +EmbImageModel build()
+  +Future<bool> embedString()
+}
+
+"riverpod::src::notifier.dart::AutoDisposeNotifier" <|-- "stego_app::ViewModel::homePageViewModel.dart::EmbImageNotifire"
+
+class "stego_app::ViewModel::homePageViewModel.dart::ExtStringNotifire" {
+  +ExtStringModel build()
+  +Future<bool> extractString()
+}
+
+"riverpod::src::notifier.dart::AutoDisposeNotifier" <|-- "stego_app::ViewModel::homePageViewModel.dart::ExtStringNotifire"
+
+class "stego_app::ViewModel::homePageViewModel.dart::LoadingNotifire" {
+  +bool build()
+  +void show()
+  +void hide()
+}
+
+"riverpod::src::notifier.dart::AutoDisposeNotifier" <|-- "stego_app::ViewModel::homePageViewModel.dart::LoadingNotifire"
+
+
+@enduml

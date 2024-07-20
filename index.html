@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>平塚勇聖のポートフォリオ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="logo.png" alt="平塚勇聖のロゴ">
+          <a href="#">平塚勇聖のポートフォリオ</a>
+        </div>
+        <nav>
+          <input type="checkbox" id="nav-toggle">
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <div class="menu-wrapper">
+            <label for="nav-toggle" class="menu-close">&times;</label>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero_container">
+        <h2>Welcome to My Portfolio</h2>
+        <div id="moving-image">
+          <img src="logo.png" alt="バイクアイコン">
+        </div>
+        <p>ご覧いただきありがとうございます。</p>
+        <p>本サイトは採用担当者様に自身のスキル、制作物を知ってもらうべく作製しました。</p>
+        <p>お見苦しい部分もあるかと思いますが、ごゆっくりご覧ください。</p>
+      </div>
+    </section>
+    
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>はじめまして。大阪出身、26歳の平塚勇聖と申します。関西大学総合情報学部を卒業後、新卒でSIer企業に入社しました。</p>
+            <p>そこでいくつかのプロジェクトを経験する中、flutterと出会い、「もっとこの技術を極めたい」という思いから転職を決断しました。</p>
+            <p>趣味はバイクで旅行すること、スキューバダイビング、キャンプ、flutterでの個人開発です。</p>
+          </div>
+          <div class="about-image">
+            <img src="S__73957389.jpg" alt="平塚勇聖のプロフィール写真">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="project-details">私が個人開発で作成したアプリやコードです。</p>
+        <div class="project-grid">
+          <div class="project">
+            <div class="project-content">
+              <img src="project3.jpg" alt="Secret Message Project">
+              <h3>Secret Message</h3>
+              <p>Flutter web, Python(flask), AWSで作成したwebアプリです。企画、設計、実装、テストまで詳細を公開しております。</p>
+            </div>
+            <div class="project-buttons">
+              <a href="project2.html">Read More</a>
+            </div>
+          </div>
+          
+          <div class="project">
+            <div class="project-content">
+              <img src="appIcon.png" alt="バイク部! App">
+              <h3>バイク部!</h3>
+              <p>Flutterで作成したiOS/androidアプリです。バックエンドはFirebaseを使用しています。ストアに公開中です。</p>
+            </div>
+            <div class="project-buttons">
+              <a href="project1.html">Read More</a>
+            </div>
+          </div>
+          
+          <div class="project">
+            <div class="project-content">
+              <img src="siteImage.png" alt="Portfolio Website">
+              <h3>平塚勇聖のポートフォリオサイト</h3>
+              <p>本ポートフォリオサイトです。<br> HTML, CSS, JavaScriptで作成し、Firebase Hostingで公開しています。</p>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/yusei-looking-for-new-job/portfolioSite"target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+          
+          <div class="project">
+            <div class="project-content">
+              <img src="codeImage.jpg" alt="Other Projects">
+              <h3>その他(スクレイピング, ツール)</h3>
+              <p>開発時に使用したツール系のコードです。効率化や自動化のためのスクリプトが含まれています。</p>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/yusei-looking-for-new-job/othert-tools" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <div class="skill">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>モバイルアプリ開発</h3>
+            <ul>
+              <li>Flutter (iOS, Android)</li>
+              <li>Swift (iOS)</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <i class="fas fa-globe"></i>
+            <h3>Webアプリ開発</h3>
+            <ul>
+              <li>Flutter (Web)</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <i class="fas fa-server"></i>
+            <h3>インフラ/バックエンド開発</h3>
+            <ul>
+              <li>Firebase</li>
+              <li>AWS</li>
+              <li>sqlite</li>
+              <li>Python (Flask)</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code"></i>
+            <h3>プログラミング言語</h3>
+            <ul>
+              <li>Dart (Flutter)</li>
+              <li>Swift (iOS)</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>Java</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code-branch"></i>
+            <h3>バージョン管理システム</h3>
+            <ul>
+              <li>git (GitHub)</li>
+              <li>SVN</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code-branch"></i>
+            <h3>UMLツール</h3>
+            <ul>
+              <li>PlantUML</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <i class="fas fa-desktop"></i>
+            <h3>OS</h3>
+            <ul>
+              <li>Linux(ubuntu)</li>
+              <li>macOS</li>
+              <li>Windows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>1a2a3a4yyy@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 平塚勇聖</p>
+    </div>
+  </footer>
+</body>
+</html>

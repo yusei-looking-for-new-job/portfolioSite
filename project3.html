@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seacret Message - プロジェクト詳細 | 平塚勇聖のポートフォリオ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project2_style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
+  </head>
+  <body>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="logo.png" alt="平塚勇聖のロゴ">
+          <a href="index.html">平塚勇聖のポートフォリオ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container content-wrapper">
+    <main>
+      <section id="project-details">
+        <h1 id="project-title">Seacret Message アプリ</h1>
+        <div class="project-image-container">
+          <img src="project3.jpg" alt="Seacret Message" class="project-image">
+        </div>
+        <div class="project-info">
+          <h2 id="project-overview">プロジェクト概要</h2>
+          <p><strong>開発人数:</strong> 1人</p>
+          <p><strong>担当フェーズ:</strong> 企画・設計・実装・テスト</p>
+          <p><strong>開発期間:</strong>約1ヶ月</p>
+          <p><strong>使用技術:</strong> Flutter web, Dart, Python, Flask, AWS,gunicorn,NGINX</p>
+          <p><strong>どんなアプリ？:</strong> ステガノグラフィという技術を用いて画像に秘密のメッセージを隠すことのできるアプリです。秘密のやり取り、作成した画像の著作権保護に役立ちます</p>
+          <a href="https://www.secret-message.site" class="btn" target="_blank">サービスを見る</a>
+        </div>
+
+        <div class="colored-section project-motivation">
+          <h2 id="project-motivation">なぜこのプロジェクトを作ったのか</h2>
+        </div>
+        <p>本アプリ、Seacret Message」は、以下の3つの主要な目的を持って開発しました：</p>
+        <h3>1. 自己成長とキャリア開発</h3>
+        <p>このプロジェクトは、自身のスキル向上と転職活動の両方を見据えて取り組みました。フルスタック開発の経験を積むことで、技術力を高めるとともに、実際の問題解決能力を示すポートフォリオ作品として活用できると考えました。</p>
+        <p>求人情報から、御社ではAWSの経験のあるエンジニアも募集していることもあり、今後のFlutter<->AWSの連携や統合にも注目して技術選定をいたしました。</p>
+        <p>御社のニーズに合わせたスキルセットを磨くことで、将来的に貢献できる可能性を高めたいと思いこのアプリの作成を決めました。</p>
+  
+        <h3>2. 現代社会の課題への取り組み</h3>
+        <p>デジタル時代において、プライバシーとセキュリティの重要性は日々高まっています。このアプリケーションを通じて、トーク履歴の流出や覗き見、画像の盗作防止など、ユーザーのプライバシー保護に貢献したいと考えました。</p>
+        
+        <h3>3. 技術の実践と探求</h3>
+        <p>このアプリは、学生時代に学んだ「情報を隠す技術」であるステガノグラフィを実際に活用したいという思いから生まれました。</p>
+        <p>主な目的は、人々が安全に秘密のメッセージをやりとりできる手段を提供することです。同時に、この技術の可能性を探りながら、日常生活でのプライバシー保護や情報セキュリティの向上に貢献したいと考えました。</p>
+
+        <div class="colored-section acquired-skills">
+          <h2 id="acquired-skills">獲得したスキルと知識</h2>
+        </div>
+        <ul>
+          <li>セキュアな通信プロトコルの設計と実装</li>
+          <li>AWSを使用したバックエンド構築</li>
+          <li>API設計と実装＆flutterとの連携</li>
+          <li>flutterでの画像フォーマットのマジックナンバーを使用したバリデーション(特にHeic/heifファイル)</li>
+        </ul>
+
+        <div class="colored-section project-details">
+          <h2>プロジェクト詳細</h2>
+        </div>
+
+        <h2 id="basic-design">1. 基本設計</h2>
+        <div class="markdown-section">
+          <div class="markdown-toggle">システム設計書 (クリックで展開)</div>
+          <pre class="markdown-content" id="markdown-content"></pre>
+        </div>
+
+        <h2 id="detailed-design">2. 詳細設計</h2>
+        <h3>2.1 シーケンス図 埋め込み</h3>
+        <div class="markdown-section">
+          <div class="markdown-toggle">シーケンス図 (クリックで展開)</div>
+          <div class="markdown-content" id="sequence-diagram-content">
+            <img src="./埋め込みシーケンス.png" alt="シーケンス図" style="max-width: 100%;">
+          </div>
+        </div>
+        <h3>2.2 シーケンス図 抽出</h3>
+        <div class="markdown-section">
+          <div class="markdown-toggle">シーケンス図 (クリックで展開)</div>
+          <div class="markdown-content" id="sequence-diagram-content">
+            <img src="./抽出シーケンス.png" alt="シーケンス図" style="max-width: 100%;">
+          </div>
+        </div>
+        
+        <h3>2.3 クラス図</h3>
+        <div class="markdown-section">
+          <div class="markdown-toggle">クラス図 (クリックで展開)</div>
+          <div class="markdown-content" id="class-diagram-content">
+            <img src="./docs/class_diagram.png" alt="クラス図" style="max-width: 100%;">
+          </div>
+        </div>
+
+        <h2 id="test-specs">3. テスト仕様書</h2>
+        <p>本プロジェクトでは、単体テスト、統合テスト、E2Eテストを実施しています。各テスト仕様書は以下のリンクからご覧いただけます：</p>
+        <ul>
+          <li><a href="./docs/test_specs/unit_tests.md">単体テスト仕様書</a></li>
+          <li><a href="./docs/test_specs/integration_tests.md">統合テスト仕様書</a></li>
+          <li><a href="./docs/test_specs/e2e_tests.md">E2Eテスト仕様書</a></li>
+        </ul>
+
+        <h2 id="source-code">4. ソースコード</h2>
+        <h3>4.1 Flutter (Dart)</h3>
+        <p>Flutterのソースコードは以下のGitHubリポジトリで管理しています：</p>
+        <a href="https://github.com/yusei-hiratsuka/seacret-message-frontend" class="btn" target="_blank">フロントエンドのソースコード</a>
+        
+        <h3>4.2 Python (Flask)</h3>
+        <p>バックエンドのPythonコードは以下のGitHubリポジトリで管理しています：</p>
+        <a href="https://github.com/yusei-hiratsuka/seacret-message-backend" class="btn" target="_blank">バックエンドのソースコード</a>
+
+        <div class="colored-section technical-challenges">
+          <h2 id="technical-challenges">技術的な挑戦と解決策</h2>
+        </div>
+        <ol>
+          <li><strong>heif,heic画像の処理:</strong> heif,heic画像の扱いが難しかったのですが、マジックナンバーをチェックすることでiOS端末でheic,heifに対応できました。これにより、幅広い端末とファイル形式に対応する能力を向上させました。</li>
+          <li><strong>画像埋め込み処理</strong>当初フロントエンドで行っていた処理は時間がかかりました。バックエンドで処理することで処理時間の短縮、実装時間の短縮ができました。この経験を通じて、効率的なリソース配分とパフォーマンス最適化の重要性を学びました。 </li>
+          <li><strong>セキュリティの確保:</strong> XSS対策、バリデーション、AWSでのhttps化など、セキュリティ関連の実装を初めて行いました。これにより、安全なアプリケーション開発の基礎を身につけることができました。</li>
+        </ol>
+
+        <div class="colored-section future-plans">
+          <h2 id="future-plans">今後の展望</h2>
+        </div>
+        <ul>
+          <li>各SNS送信時のJPEG圧縮に対してロバストな埋め込みを実現する</li>
+          <li>埋め込み文字の暗号化/抽出時の復号処理</li>
+          <li>アプリ対応 (プライバシーポリシー,利用規約,データ保持ポリシー)</li>
+        </ul>
+      </section>
+    </main>
+    
+    <aside class="toc">
+      <h2>目次</h2>
+      <ul>
+        <li><a href="#project-title">Seacret Message プロジェクト</a></li>
+        <li><a href="#project-overview">プロジェクト概要</a></li>
+        <li><a href="#project-motivation">プロジェクトの動機</a></li>
+        <li><a href="#acquired-skills">獲得したスキルと知識</a></li>
+        <li><a href="#basic-design">基本設計</a></li>
+        <li><a href="#detailed-design">詳細設計</a></li>
+        <li><a href="#test-specs">テスト仕様書</a></li>
+        <li><a href="#source-code">ソースコード</a></li>
+        <li><a href="#technical-challenges">技術的な挑戦と解決策</a></li>
+        <li><a href="#future-plans">今後の展望</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 平塚勇聖</p>
+    </div>
+  </footer>
+  <script src="project2_script.js"></script>
+</body>
+</html>
